@@ -5,12 +5,45 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        
+
         <title>Survey Company</title>
 
     </head>
 
     <body>
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+        <script src='js/main.js'></script>
+        <!-- <script src='/server.js'></script> -->
+        <script type="text/javascript">
+
+            window.onload = function () {
+                // alert('Page loaded');
+                function pickRandom() {
+                    // console.log('hi')
+                    // Returns a random integer between 0 and 9
+                    var random = Math.floor(Math.random() * 4);
+                    console.log('random = ' + random)
+
+                    switch (random) {
+                        case 0:
+                            document.head.innerHTML = '<link id = "style0" rel = "stylesheet" href = "css/style0.css">';
+                            break;
+                        case 1:
+                            document.head.innerHTML = '<link id="style1" rel="stylesheet" href="css/style1.css">';
+                            break;
+                        case 2:
+                            document.head.innerHTML = '<link id="style2" rel="stylesheet" href="css/style2.css">';
+                            break;
+                        default:
+                            document.head.innerHTML = '<link id="style0" rel="stylesheet" href="css/style0.css">';
+                    }
+                };
+                pickRandom();
+
+            };
+
+        </script>
 
         <!-- Showcase & Nav -->
         <div id="showcase">
@@ -139,39 +172,6 @@
             </div>
         </footer>
 
-        <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
-        <script src='js/main.js'></script>
-        <!-- <script src='/server.js'></script> -->
-        <script type="text/javascript">
-
-            window.onload = function () {
-                // alert('Page loaded');
-                function pickRandom() {
-                    // console.log('hi')
-                    // Returns a random integer between 0 and 9
-                    var random = Math.floor(Math.random() * 4);
-                    console.log('random = ' + random)
- 
-                    switch (random) {
-                        case 0:
-                            document.head.innerHTML = '<link id = "style0" rel = "stylesheet" href = "css/style0.css">';
-                            break;
-                        case 1:
-                            document.head.innerHTML = '<link id="style1" rel="stylesheet" href="css/style1.css">';
-                            break;
-                        case 2:
-                            document.head.innerHTML = '<link id="style2" rel="stylesheet" href="css/style2.css">';
-                            break;
-                        default:
-                            document.head.innerHTML = '<link id="style0" rel="stylesheet" href="css/style0.css">';
-                    }
-                };
-                pickRandom();
-
-            };
-
-        </script>
 
     </body>
 
