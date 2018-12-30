@@ -181,7 +181,7 @@ nav ul {
 }
 nav li {
   display: inline;
-  float: left;
+  /* float: left; */
 }
 nav a {
   display: inline-block;
